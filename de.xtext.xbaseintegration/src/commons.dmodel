@@ -1,0 +1,12 @@
+package my.company.common {
+    
+    entity HasAuthor {
+        author: String 
+        op correctOperation(String name) : int {
+        	name.length  
+        } 
+        op incorrectOperation(String name) : String{
+        	1 
+        }
+    } 
+} 

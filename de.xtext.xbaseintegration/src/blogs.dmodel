@@ -1,0 +1,20 @@
+package my.company.blog {
+  
+    import my.company.common.*
+     
+    entity Blog { 
+        title: String
+        posts: Post  
+    }   
+    
+    entity Post extends HasAuthor { 
+        title: String
+        content: String
+        date : java.util.Date
+       	comments: Comment
+    }
+    
+    entity Comment extends HasAuthor {
+        content: String
+    }
+} 
