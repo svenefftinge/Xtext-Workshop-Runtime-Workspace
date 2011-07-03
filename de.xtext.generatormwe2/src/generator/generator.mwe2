@@ -1,0 +1,8 @@
+module generator.generator
+
+Workflow { 
+	bean = @org.example.domainmodel.generator.DomainmodelGeneratorMWE{
+		modelPath = "model/"
+		targetDir = "src-gen"
+	}
+}

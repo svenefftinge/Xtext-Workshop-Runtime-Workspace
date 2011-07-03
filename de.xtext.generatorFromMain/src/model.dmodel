@@ -1,0 +1,34 @@
+
+package java.lang {
+	datatype String
+}
+
+package java.util {
+	datatype Date 
+}
+
+
+package my.company.blog {
+  
+    import java.lang.*
+    import my.company.common.*
+      
+    entity Blog {
+        title: String
+        many posts: Post
+    }
+    
+    entity Post extends HasAuthor {
+        title: String
+        content: String
+        many comments: Comment
+    }
+    
+    entity Comment extends HasAuthor {
+        content: String
+    }
+    
+    entity HasAuthor {
+        author: java.lang.String
+    }
+} 
